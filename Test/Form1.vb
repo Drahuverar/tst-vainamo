@@ -45,7 +45,7 @@
         Dim startPoint As Point = JobBox.PointToScreen(New Point(e.X, e.Y))
         Dim theRectangle As Rectangle = New Rectangle(startPoint.X, startPoint.Y, 0, 0)
         ' what control did we get dropped on?
-        For i = 0 To Controls.Count - 1
+        For i = 0 To Controls.Count
             ' Allow drop in panels only!
             If TypeOf Controls(i) Is Panel Then ' note: 1-layer, doesn't support panels inside panels!
                 controlRectangle = Controls(i).RectangleToScreen(Controls(i).ClientRectangle)
